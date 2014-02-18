@@ -116,10 +116,10 @@ h2 {
 	}
 
 	.rectangle {
-		width: 48%;
+		width: 32em;
 		min-width: 30em;
-		height:30em;
-		margin: 1% ;
+		height:32em;
+		margin: 1em;
 	}
 }
 
