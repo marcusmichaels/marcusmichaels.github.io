@@ -17,6 +17,8 @@ body {
 
 a {
 	border:none;
+	text-decoration: none;
+	font-weight: normal;
 }
 
 .container {
