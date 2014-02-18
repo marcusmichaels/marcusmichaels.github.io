@@ -33,7 +33,9 @@ a:visited {
 	width:960px;
 	overflow: hidden;
 	margin:10em auto;
-	padding:7em 0 0 0;
+	padding-top:8em;
+	padding-bottom: 20em;
+
 }
 
 .header {
@@ -106,7 +108,7 @@ h2 {
 }
 
 
-@media screen and (max-width: 981px){
+@media screen and (max-width: 1000px){
 
 	.wrapper {
 		width: 680px;
