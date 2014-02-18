@@ -36,7 +36,7 @@ a {
 	height: 7em;
 	background-color: #fff;
 	width: 100%;
-
+	border-bottom: 0.1em solid #33cccc;
 }
 
 .fixed {
@@ -54,7 +54,7 @@ a {
 	background:url('web-svg/logo-white.svg') center center no-repeat;
 	background-color: #33cccc;
 	background-size: 80% auto;
-	/*border:1px solid #33CCCC;*/
+	border:1px solid #33CCCC;
 	cursor: default;
 }
 
