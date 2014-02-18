@@ -15,7 +15,9 @@ body {
 	color: #555;
 }
 
-a {
+a,
+a:hover,
+a:visited {
 	border:none;
 	text-decoration: none;
 	font-weight: normal;
@@ -51,12 +53,11 @@ a {
 	top: 3em;
 	left: 50%;
 	margin-left: -4em;
-	width: 9em;
-	height:9em;
+	width: 8em;
+	height: 8em;
 	background:url('web-svg/logo-white.svg') center center no-repeat;
 	background-color: #33cccc;
 	background-size: 80% auto;
-	border:1px solid #33CCCC;
 	cursor: default;
 }
 
