@@ -21,6 +21,7 @@ a:visited {
 	border:none;
 	text-decoration: none;
 	font-weight: normal;
+	-webkit-tap-highlight-color: 0;
 }
 
 .container {
@@ -59,6 +60,7 @@ a:visited {
 	background-color: #33cccc;
 	background-size: 80% auto;
 	cursor: default;
+	overflow: hidden;
 }
 
 .big-squiggle{
