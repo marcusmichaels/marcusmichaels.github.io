@@ -21,7 +21,6 @@ a:visited {
 	border:none;
 	text-decoration: none;
 	font-weight: normal;
-	-webkit-tap-highlight-color: 0;
 }
 
 .container {
