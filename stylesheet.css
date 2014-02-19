@@ -93,9 +93,16 @@ h2 {
 .rectangle {
 	float: left;
 	width: 20em;
-	height: 10em;
+	height: 20em;
 	margin: 2em;
 	overflow: hidden;
+}
+
+.rectangle:first-child {
+	display: block;
+	float: none;
+	width: 92em;
+	height: 40em;
 }
 
 .tomato {
@@ -119,6 +126,13 @@ h2 {
 		min-width: 30em;
 		height:32em;
 		margin: 1em;
+	}
+
+	.rectangle:first-child {
+		display: block;
+		float: none;
+		width: 66em;
+		height: 32em;
 	}
 }
 
