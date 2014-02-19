@@ -116,9 +116,24 @@ h2 {
 
 @media screen and (max-width: 1000px){
 
+	.header {
+		height: 5.5em;
+	}
+
+
+	.squiggle {
+		top: 2.5em;
+		left: 50%;
+		margin-left: -3em;
+		width: 6em;
+		height: 6em;
+		background-size: 80% auto;
+
+	}
+
 	.wrapper {
 		width: 680px;
-		margin: 7em auto;
+		margin: 6em auto;
 	}
 
 	.rectangle {
@@ -138,9 +153,25 @@ h2 {
 
 @media screen and (max-width: 710px){
 
+
+	.header {
+		height: 4em;
+	}
+
+
+	.squiggle {
+		top: 1.5em;
+		left: 50%;
+		margin-left: -2.5em;
+		width: 5em;
+		height: 5em;
+		background-size: 80% auto;
+
+	}
+
 	.wrapper {
 		width: 94%;
-		margin: 7em auto;
+		margin: 2em auto;
 	}
 
 	.rectangle {
