@@ -15,31 +15,64 @@ body {
 	color: #555;
 }
 
+a,
+a:hover,
+a:visited {
+	border:none;
+	text-decoration: none;
+	font-weight: normal;
+}
+
 .container {
 	width: 100%;
 	height: 100%;
 }
 
 .wrapper {
-	width:1260px;
+	width:960px;
 	overflow: hidden;
-	margin:auto;
-	padding:5em 0 0 0;
+	margin:10em auto;
+	padding-top:8em;
+	padding-bottom: 20em;
+
+}
+
+.header {
+	position: relative;
+	height: 7em;
+	background-color: #fff;
+	width: 100%;
+	border-bottom: 0.1em solid #33cccc;
+}
+
+.fixed {
+	position: fixed;
+	top: 0;
 }
 
 .squiggle {
-	display: block;
-	width: 100%;
-	height:100%;
-	background:url('web-svg/logo.svg') center center no-repeat;
-	background-color: tomato;
-	background-size: 40% auto;
+	position: absolute;
+	top: 3em;
+	left: 50%;
+	margin-left: -4em;
+	width: 8em;
+	height: 8em;
+	background:url('web-svg/logo-white.svg') center center no-repeat;
+	background-color: #33cccc;
+	background-size: 80% auto;
 	cursor: default;
+	overflow: hidden;
 }
 
-#header {
-	height: 0.01em;
+.big-squiggle{
+	margin: auto;
+	display: block;
 	width: 100%;
+	height: 100%;
+	background:url('web-svg/logo.svg') center center no-repeat;
+	background-color: #FFF;
+	background-size: 40% auto;
+	cursor: default;
 }
 
 h1 {
@@ -49,7 +82,6 @@ h1 {
 	text-align: center;
 	font-weight: normal;
 	text-decoration: none;
-	color: #fff;
 }
 
 h2 {
@@ -58,99 +90,167 @@ h2 {
 	padding-bottom: 0.2em;
 }
 
-.content-box {
-	float:left;
-	width: 400px;
-	padding:10px 10px;
-	margin: auto;
-	overflow: hidden;
-	border-top: 1px solid tomato;
-	border-bottom: 1px solid tomato;
-}
-
-.float-left {
-	float:left;
-}
-
-.big-col {
-	display: inline;
-	float:left;
-	width:60%;
-
-}
-
-.little-col {
-	display: inline;
+.rectangle {
 	float: left;
-	width: 36%;
-	padding:4% 0 0 4%;
+	width: 20em;
+	height: 20em;
+	margin: 2em;
+	overflow: hidden;
 }
 
-.video-wrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	height: 0;
-}
-.video-wrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+.rectangle:first-child {
+	display: block;
+	float: none;
+	width: 92em;
+	height: 40em;
 }
 
-.skills {
-
+.tomato {
+	background-color: tomato;
 }
 
-.skills ul li{
-	margin: 0 1em;
-	padding: 0.4em 0;
-	font-size: 1.2em;
-	display: inline-block;
-	list-style: none;
+.blue {
+	background-color: #33CCCC;
 }
 
-@media screen and (max-width: 1280px){
+
+@media screen and (max-width: 1000px){
+
+	.header {
+		height: 5.5em;
+	}
+
+
+	.squiggle {
+		top: 2.5em;
+		left: 50%;
+		margin-left: -3em;
+		width: 6em;
+		height: 6em;
+		background-size: 80% auto;
+
+	}
+
 	.wrapper {
-		width:100%;
-		margin: auto;
-		padding:2% 0 0 0;
+		width: 680px;
+		margin: 6em auto;
 	}
 
-	.content-box{
-		float:none;
-		width: 90%;
-		margin:auto;
-		border:none;
-	}
-}
-
-@media screen and (max-width: 640px){
-
-	.content-box {
-		width:100%;
-		padding:0;
+	.rectangle {
+		width: 32em;
+		min-width: 30em;
+		height:32em;
+		margin: 1em;
 	}
 
-	.big-col {
-		display: block;
-		float:none;
-		width: 96%;
-		margin:auto;
-	}
-
-	.little-col {
+	.rectangle:first-child {
 		display: block;
 		float: none;
-		width:96%;
-		padding:2% 2% 10% 2%;
+		width: 66em;
+		height: 32em;
+	}
+}
+
+@media screen and (max-width: 710px){
+
+
+	.header {
+		height: 4em;
+	}
+
+
+	.squiggle {
+		top: 1.5em;
+		left: 50%;
+		margin-left: -2.5em;
+		width: 5em;
+		height: 5em;
+		background-size: 80% auto;
+
+	}
+
+	.wrapper {
+		width: 94%;
+		margin: 2em auto;
+	}
+
+	.rectangle {
+		width: 100%;
+		min-width: 30em;
+		margin:1em 0;
 	}
 
 }
 
-/* This is purely for breathing space while coding. Must delete later */
+/* CSS3 ANIMATIONS */
 
-.whitespace{
-	height:100%;
+.animate {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.tada {
+  -webkit-animation-name: tada;
+  animation-name: tada;
+}
+
+@-webkit-keyframes tada {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  10%, 20% {
+    -webkit-transform: scale(0.9) rotate(-3deg);
+    transform: scale(0.9) rotate(-3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+    transform: scale(1.1) rotate(3deg);
+  }
+
+  40%, 60%, 80% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+    transform: scale(1.1) rotate(-3deg);
+  }
+
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes tada {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  10%, 20% {
+    -webkit-transform: scale(0.9) rotate(-3deg);
+    -ms-transform: scale(0.9) rotate(-3deg);
+    transform: scale(0.9) rotate(-3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+    -ms-transform: scale(1.1) rotate(3deg);
+    transform: scale(1.1) rotate(3deg);
+  }
+
+  40%, 60%, 80% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+    -ms-transform: scale(1.1) rotate(-3deg);
+    transform: scale(1.1) rotate(-3deg);
+  }
+
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+    -ms-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+  }
 }
